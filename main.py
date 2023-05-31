@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 import models
-import users,auth,posts
+import users,auth,posts,comments
 from database import engine
 
 
@@ -22,3 +22,5 @@ app.include_router(users.router)
 app.include_router(auth.router)
 
 app.include_router(posts.router)
+
+app.include_router(comments.router)

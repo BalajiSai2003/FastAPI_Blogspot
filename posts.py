@@ -63,7 +63,7 @@ def delete_post(id : int,db : Session = Depends(get_db),current_user : int = Dep
     if post is None:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,detail=f"post with id : {id} Not found")
 
-    if post.user_id != int(current_user.id) :
+    if post.author_id != int(current_user.id) :
         raise HTTPException(status_code=status.HTTP_403_FORBIDDEN,detail="Not Authorised to perform reqested action")
 
     post_query.delete(synchronize_session=False)
@@ -85,7 +85,7 @@ def updatePost(id: int, updated_post: schemas.UpdatePost,db : Session = Depends(
     # print(post)
     if post is None:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,detail=f"post with id : {id} Not found")
-    if post.user_id != int(current_user.id) :
+    if post.author_id != int(current_user.id) :
         raise HTTPException(status_code=status.HTTP_403_FORBIDDEN,detail="Not Authorised to perform reqested action")
     post_query.update(updated_post.dict(),synchronize_session=False)
 

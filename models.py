@@ -35,6 +35,7 @@ class Comment(Base):
 
     id = Column(Integer, primary_key=True, index=True)
     content = Column(String)
+    created_at  = Column(TIMESTAMP,nullable = False ,server_default = text('now()'))
     author_id = Column(Integer, ForeignKey("users.id", ondelete="CASCADE"), nullable = False)
     post_id = Column(Integer, ForeignKey("posts.id", ondelete="CASCADE"), nullable = False)
 

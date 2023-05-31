@@ -83,6 +83,7 @@ class UpdatePost(BasePost):
     pass
 
 class Post(BasePost):
+
     author_id: int
     id : int
     created_at: datetime
@@ -101,8 +102,6 @@ class Post(BasePost):
 
 class CommentBase(BaseModel):
     content: str
-    post_id: int
-
 
 class CommentCreate(CommentBase):
     pass
@@ -111,11 +110,12 @@ class CommentCreate(CommentBase):
 class CommentUpdate(CommentBase):
     pass
 
-
 class Comment(CommentBase):
-    id: int
-    author: UserResponce
-    post: Post
-
+    author_id: int
+    post_id : int
+    id : int
+    created_at: datetime
+    author : UserResponce
+    post : BasePost
     class Config:
         orm_mode = True
