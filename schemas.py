@@ -82,12 +82,12 @@ class CreatePost(BasePost):
 class UpdatePost(BasePost):
     pass
 
-class Post(BaseModel):
+class Post(BasePost):
     author_id: int
     id : int
     created_at: datetime
     author : UserResponce
-    comments: List["Comment"] = []
+    comments: List = []
 
 
     class Config:
