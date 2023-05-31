@@ -33,10 +33,10 @@ def verify_access_token(token : str, credentisl_exception):
         payload = jwt.decode(token, SECRET_KEY,algorithms=[ALGORITHM])
 
         id : str  = payload.get("user_id")
-        type : str = payload.get("user_type")
+
     
 
-        if id is None or type is None:
+        if id is None:
             raise credentisl_exception
         token_data = schemas.Token_data(id=id, type=type)
             
