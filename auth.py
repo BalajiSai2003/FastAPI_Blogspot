@@ -18,5 +18,5 @@ def login(User_credentials : OAuth2PasswordRequestForm = Depends() , db : Sessio
     if not utils.verify(User_credentials.password , user.password):
         raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Invalied Credentials!!")
     
-    access_token = Oauth2.create_access_token(data={"user_id" : user.id , "user_type" : user.user_type})
+    access_token = Oauth2.create_access_token(data={"user_id" : user.id , "user_email" : user.email})
     return {"access_token" : access_token, "token_type" : "bearer"}
