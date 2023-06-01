@@ -40,7 +40,7 @@ Then, navigate to the cloned directory
 cd FastAPI_Blogspot
 
 ````
-##  You need a database in Postgres. Create a database in Postgres, and then create a file named `.env` and write the following configuration in the file
+You need a database in Postgres. Create a database in Postgres, and then create a file named `.env` and write the following configuration in the file
 
 
 ````
@@ -54,7 +54,7 @@ ALGORITHM = HS256
 
 ````
 
-## Make sure to have Docker installed. Run the following commands
+Make sure to have Docker installed. Run the following commands
 
 
 
@@ -66,8 +66,7 @@ docker compose up -d
 ````
 
 
-
-## Then, you can use the following link to access the API
+Then, you can use the following link to access the API
 
 
 
