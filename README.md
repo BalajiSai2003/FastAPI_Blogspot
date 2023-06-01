@@ -16,8 +16,7 @@
 
 ## Features
 
-* Full **Docker** integration (Docker-based).
-* Docker Swarm Mode deployment.
+* Full **Docker** integration (Docker-based)..
 * **Docker Compose** integration and optimization for local development.
 * **Secure password** hashing by default.
 * **JWT token** authentication.
