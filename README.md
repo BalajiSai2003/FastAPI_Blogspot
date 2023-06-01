@@ -1,44 +1,62 @@
-# 
 # Backend FastAPI_Blogspot app by using FastAPI
 
-#### This API  has 3 routes
+#### This API has 3 routes
 
 ## 1) Post route
 
-#### This route is reponsible for creating post, deleting post, updating post and searching Post by id
+#### This route is responsible for creating a post, deleting a post, updating a post, and searching for a post by ID.
 
 ## 2) Users route
 
-#### This route is about creating user ,deleting user, updating user and searching user by id
+#### This route is about creating a user, deleting a user, updating a user, and searching for a user by ID.
 
 ## 3) Auth route
 
-#### This route is about login system
+#### This route is about the login system.
 
 ## Features
 
-* Full **Docker** integration (Docker based).
+* Full **Docker** integration (Docker-based).
 * Docker Swarm Mode deployment.
-* **Docker Compose** integration and optimization for local development
+* **Docker Compose** integration and optimization for local development.
 * **Secure password** hashing by default.
 * **JWT token** authentication.
-* **SQLAlchemy** models
-# how to run locally
-First clone this repo by using following command
+* **SQLAlchemy** models.
+
+# How to run locally
+
+First, clone this repo by using the following command
 ````
 
 git clone https://github.com/BalajiSai2003/FastAPI_Blogspot.git
 
 ````
-then 
+
+Then, navigate to the cloned directory
+
+
 ````
 
 cd FastAPI_Blogspot
 
 ````
+##  You need a database in Postgres. Create a database in Postgres, and then create a file named `.env` and write the following configuration in the file
 
-Make sure to have docker installed
-run the following commands
+
+````
+DATABASE_HOSTNAME = localhost
+DATABASE_PORT = 5432
+DATABASE_PASSWORD = password_that_you_set
+DATABASE_NAME = name_of_database
+DATABASE_USERNAME = User_name
+SECRET_KEY = 09d25e094faa2556c818166b7a99f6f0f4c3b88e8d3e7
+ALGORITHM = HS256
+
+````
+
+## Make sure to have Docker installed. Run the following commands
+
+
 
 ````
 
@@ -49,7 +67,9 @@ docker compose up -d
 
 
 
-Then you can use following link to use the  API
+## Then, you can use the following link to access the API
+
+
 
 ````
 
@@ -57,16 +77,3 @@ http://127.0.0.1:8000/docs
 
 ````
 
-## After run this API you need a database in postgres 
-Create a database in postgres then create a file name .env and write the following things in you file 
-
-````
-DATABASE_HOSTNAME = localhost
-DATABASE_PORT = 5432
-DATABASE_PASSWORD = passward_that_you_set
-DATABASE_NAME = name_of_database
-DATABASE_USERNAME = User_name
-SECRET_KEY = 09d25e094faa2556c818166b7a99f6f0f4c3b88e8d3e7 
-ALGORITHM = HS256
-
-````
