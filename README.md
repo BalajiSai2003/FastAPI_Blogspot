@@ -60,6 +60,10 @@ Make sure to have Docker installed. Run the following commands
 ````
 
 docker build -t myimage .
+
+````
+````
+
 docker compose up -d
 
 ````
